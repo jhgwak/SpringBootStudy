@@ -25,10 +25,14 @@ public class Posts {
     private String author;
 
     @Builder//setter 대신 사용하여 값을 초기화해줌
-    public Posts(String title, String content,String author){
+    public Posts(String title, String content,String author){//내용
         this.title=title;
         this.content=content;
         this.author=author;
+    }
+    public void update(String title,String content){//업데이트
+        this.title=title;
+        this.content=content;
     }
 
 
