@@ -1,4 +1,5 @@
 package com.jojoldu.book.springboot.domain.posts;
+import com.jojoldu.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Entity
 
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//pk 생셩규칙을 이야기한다
     private Long id;
