@@ -3,14 +3,15 @@ var main={
         var _this=this;
         $('#btn-save').on('click',function (){
             _this.save();
-        })
+        });
     },
     save :function () {
         var data = {
             title: $('#title').val(),
-            title: $('#author').val(),
-            title: $('#content').val()
-        }
+            author: $('#author').val(),
+            content: $('#content').val()
+        };
+
         $.ajax({
             type: 'POST',
             url: '/api/v1/posts',
